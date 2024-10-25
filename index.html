@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Chalak Suvidha</h2>
+            <ul class="contact-list">
+                <li><button id="rtoBtn">Contact local RTO</button></li>
+                <li><button id="mukhiyaBtn">Contact local Mukhiya</button></li>
+                <li><button id="advocateBtn">Contact local Advocate</button></li>
+                <li><button id="policeBtn">Contact local Police Station</button></li>
+                <li><button id="truckBtn">Contact local Truck Associations</button></li>
+            </ul>
+        </div>
     <header>
         <h1>Chalak Suvidha</h1>
         <p>Your One-Stop Solution for Vehicle Verification</p>
@@ -17,11 +28,58 @@
         </nav>
     </header>
 
-    <main>
-        <!-- Button to show the VAHAN SUVIDHA forms -->
-      
 
-        <!-- All sections under VAHAN SUVIDHA, hidden initially -->
+    <main>
+        <!-- FASTag section -->
+        <div id="fastagSection" style="display:none;">
+            <!-- Parking Fee Payment -->
+            <section id="parking-fee">
+                <h2>Parking Fee Payment</h2>
+                <p>Pay your parking fees conveniently through FASTag. Use your FASTag balance for cashless parking fee payments at select parking lots.</p>
+                <div id="parking-fee-data"></div> <!-- Placeholder for real-time data -->
+            </section>
+            
+            <!-- Fuel Payment -->
+            <section id="fuel-payment">
+                <h2>Fuel Payment</h2>
+                <form id="fuel-form">
+                    <label for="fuelAmount">Fuel Amount:</label>
+                    <input type="text" id="fuelAmount" name="fuelAmount" required><br><br>
+                    <button type="submit">Pay for Fuel</button>
+                </form>
+            </section>
+            
+            <!-- E-Challan Payment -->
+            <section id="e-challan">
+                <h2>E-Challan Payment</h2>
+                <form id="challan-form">
+                    <label for="challanNumber">Challan Number:</label>
+                    <input type="text" id="challanNumber" name="challanNumber" required><br><br>
+                    <button type="submit">Pay E-Challan</button>
+                </form>
+            </section>
+            
+            <!-- Vehicle Tracking -->
+            <section id="vehicle-tracking">
+                <h2>Vehicle Tracking</h2>
+                <p>Track your vehicle in real-time using FASTag technology.</p>
+                <div id="vehicle-location"></div> <!-- Placeholder for vehicle tracking info -->
+            </section>
+            
+            <!-- Time-Saving -->
+            <section id="time-saving">
+                <h2>Time-Saving</h2>
+                <p>FASTag significantly reduces your waiting time at toll plazas by enabling fast, automatic payments.</p>
+            </section>
+            
+            <!-- Convenience -->
+            <section id="convenience">
+                <h2>Convenience</h2>
+                <p>Enjoy the convenience of cashless transactions for toll payments, fuel, parking, and more with FASTag.</p>
+            </section>
+        </div>
+
+        <!-- VAHAN SUVIDHA sections, hidden initially -->
         <div id="vahanForms" style="display:none;">
             <!-- Insurance Form -->
             <section id="insurance-section">
@@ -128,9 +186,9 @@
                 </form>
             </section>
         </div>
-         <!-- SARATHI Sections, hidden initially -->
-         <div id="sarathiSections" style="display:none;">
-            
+
+        <!-- SARATHI Sections, hidden initially -->
+        <div id="sarathiSections" style="display:none;">
             <!-- Freight Transport Data Access -->
             <section id="freightTransport">
                 <h2>Freight Transport Data Access</h2>
@@ -162,7 +220,7 @@
                     <input type="text" id="cardNumber" name="cardNumber" required><br><br>
 
                     <label for="expiryDate">Expiry Date:</label>
-                    <input type="month" id="expiryDate" name="expiryDate" required><br><br>
+                    <input type="date" id="expiryDate" name="expiryDate" required><br><br>
 
                     <label for="cvv">CVV:</label>
                     <input type="password" id="cvv" name="cvv" required><br><br>
@@ -170,64 +228,15 @@
                     <button type="submit">Make Payment</button>
                 </form>
             </section>
-
-            <!-- Operational Efficiency -->
-            <section id="operationalEfficiency">
-                <h2>Operational Efficiency Dashboard</h2>
-                <div id="efficiencyDashboard">
-                    <p>Operational data loading...</p>
-                </div>
-            </section>
-
-            <!-- Route Optimization -->
-            <section id="routeOptimization">
-                <h2>Route Optimization</h2>
-                <form id="routeForm">
-                    <label for="startLocation">Start Location:</label>
-                    <input type="text" id="startLocation" name="startLocation" required><br><br>
-
-                    <label for="endLocation">End Location:</label>
-                    <input type="text" id="endLocation" name="endLocation" required><br><br>
-
-                    <button type="submit">Optimize Route</button>
-                </form>
-                <div id="optimizedRoute">
-                    <p>Optimized route will appear here.</p>
-                </div>
-            </section>
-
-            <!-- Real-Time Tracking -->
-            <section id="realTimeTracking">
-                <h2>Real-Time Tracking</h2>
-                <div id="trackingMap">
-                    <p>Tracking data loading...</p>
-                </div>
-            </section>
         </div>
-        <div id="fastagSection" style="display:none;">
-            <h2>FASTag: Vehicle Toll Payment Verification</h2>
-            <form id="fastag-form">
-                <label for="fastagNumber">FASTag Number:</label>
-                <input type="text" id="fastagNumber" name="fastagNumber" required><br><br>
-
-                <label for="regNumberFastag">Vehicle Registration Number:</label>
-                <input type="text" id="regNumberFastag" name="regNumberFastag" required><br><br>
-
-                <button type="submit">Verify FASTag</button>
-            </form>
-        </div>
-
-        
-    
-        
-
-
     </main>
 
     <footer>
         <p>&copy; 2024 Chalak Suvidha. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript for showing and hiding sections based on button clicks -->
     <script src="index.js"></script>
 </body>
+
 </html>
